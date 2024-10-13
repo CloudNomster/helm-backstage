@@ -5,8 +5,8 @@ backstage:
 
     image:
       registry: registry.maximillian.se
-      repository: library
-      tag: backstage:latest
+      repository: library/backstage
+      tag: latest
       pullPolicy: Always
 
     containerPorts:

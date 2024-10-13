@@ -4,7 +4,7 @@ backstage:
     revisionHistoryLimit: 0
 
     image:
-      registry: registry.maximillian.se
+      registry: registry.maximillian.se:80
       repository: library/backstage
       tag: latest
       pullPolicy: Always

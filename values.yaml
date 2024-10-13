@@ -16,6 +16,9 @@ backstage:
 
     installDir: /app
 
+    extraEnvVarsSecrets:
+      - backstage-secrets
+    
     # Backstage doesn't provide any health endpoints by default. A simple one can be added like this: https://backstage.io/docs/plugins/observability/#health-checks
     readinessProbe: {}
 
@@ -26,6 +29,8 @@ backstage:
     startupProbe: {}
 
     appConfig: {}
+
+
 
 
 

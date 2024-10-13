@@ -25,16 +25,8 @@ backstage:
     # Backstage doesn't provide any health endpoints by default. A simple one can be added like this: https://backstage.io/docs/plugins/observability/#health-checks
     startupProbe: {}
 
-    appConfig:
-      app:
-        title: NomsterLab
-        baseUrl: <path:k8s/data/backstage#baseUrl>
-      organization:
-        name: CloudNomster
-      backend:
-        auth:
-          keys:
-            - secret: <path:k8s/data/backstage#auth_secret>
+    appConfig: {}
+
 
 
 

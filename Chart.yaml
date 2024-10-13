@@ -1,0 +1,13 @@
+apiVersion: v2
+name: backstage
+description: A Helm chart for Backstage
+home: https://github.com/CloudNomster/helm-backstage
+type: application
+version: 0.1.0
+deprecated: false
+
+dependencies:
+  - name: backstage
+    version: 1.10.0
+    repository: https://backstage.github.io/charts
+

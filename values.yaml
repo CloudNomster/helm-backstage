@@ -1,0 +1,97 @@
+backstage:
+  backstage:
+    replicas: 1
+    revisionHistoryLimit: 0
+
+    image:
+      registry: registry.maximillian.se
+      repository: library/backstage
+      tag: latest
+      pullPolicy: Always
+
+    containerPorts:
+      backend: 7007
+
+    command: ["node", "packages/backend"]
+
+    args: []
+
+    extraAppConfig: []
+
+    extraContainers: []
+
+    extraEnvVars: []
+
+    extraEnvVarsCM: []
+
+    extraEnvVarsSecrets: []
+
+    extraVolumeMounts: []
+
+    extraVolumes: []
+
+    initContainers: []
+
+    installDir: /app
+
+    resources: {}
+
+    # Backstage doesn't provide any health endpoints by default. A simple one can be added like this: https://backstage.io/docs/plugins/observability/#health-checks
+    readinessProbe: {}
+
+    # Backstage doesn't provide any health endpoints by default. A simple one can be added like this: https://backstage.io/docs/plugins/observability/#health-checks
+    livenessProbe: {}
+
+    # Backstage doesn't provide any health endpoints by default. A simple one can be added like this: https://backstage.io/docs/plugins/observability/#health-checks
+    startupProbe: {}
+
+    appConfig:
+      app:
+        title: NomsterLab
+      organization:
+        name: CloudNomster
+
+    podLabels: {}
+
+    annotations: {}
+
+
+
+  # -- PostgreSQL [chart configuration](https://github.com/bitnami/charts/blob/master/bitnami/postgresql/values.yaml)
+  # @default -- See below
+  postgresql:
+
+    # -- Switch to enable or disable the PostgreSQL helm chart
+    enabled: false
+
+    # -- The authentication details of the Postgres database
+    auth:
+
+      # -- Name for a custom user to create
+      username: bn_backstage
+
+      # -- Password for the custom user to create
+      password: ""
+
+      # -- Name of existing secret to use for PostgreSQL credentials
+      existingSecret: ""
+
+      # -- The secret keys Postgres will look for to retrieve the relevant password
+      secretKeys:
+
+        # -- The key in which Postgres will look for, for the admin password, in the existing Secret
+        adminPasswordKey: admin-password
+
+        # -- The key in which Postgres will look for, for the user password, in the existing Secret
+        userPasswordKey: user-password
+
+        # -- The key in which Postgres will look for, for the replication password, in the existing Secret
+        replicationPasswordKey: replication-password
+
+    # -- PostgreSQL architecture (`standalone` or `replication`)
+    architecture: standalone
+
+  serviceAccount:
+    create: true
+    name: "backstage"
+    automountServiceAccountToken: true

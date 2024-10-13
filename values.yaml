@@ -14,27 +14,7 @@ backstage:
 
     command: ["node", "packages/backend"]
 
-    args: []
-
-    extraAppConfig: []
-
-    extraContainers: []
-
-    extraEnvVars: []
-
-    extraEnvVarsCM: []
-
-    extraEnvVarsSecrets: []
-
-    extraVolumeMounts: []
-
-    extraVolumes: []
-
-    initContainers: []
-
     installDir: /app
-
-    resources: {}
 
     # Backstage doesn't provide any health endpoints by default. A simple one can be added like this: https://backstage.io/docs/plugins/observability/#health-checks
     readinessProbe: {}
@@ -48,13 +28,13 @@ backstage:
     appConfig:
       app:
         title: NomsterLab
-        baseUrl: https://backstage.maximillian.se
+        baseUrl: <path:k8s/data/backstage#baseUrl>
       organization:
         name: CloudNomster
-
-    podLabels: {}
-
-    annotations: {}
+      backend:
+        auth:
+          keys:
+            - secret: <path:k8s/data/backstage#auth_secret>
 
 
 

@@ -48,6 +48,7 @@ backstage:
     appConfig:
       app:
         title: NomsterLab
+        baseUrl: https://backstage.maximillian.se
       organization:
         name: CloudNomster
 

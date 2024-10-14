@@ -1,10 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: backstage
-  description: Backstage for CloudNomster
+  name: backstage-helm
+  description: Backstage Helm chart
   annotations:
-    github.com/project-slug: CloudNomster/backstage
+    github.com/project-slug: CloudNomster/helm-backstage
     argocd/app-name: backstage
   #   backstage.io/techdocs-ref: dir:.
 spec:

@@ -13,3 +13,4 @@ spec:
   lifecycle: production
   dependsOn:
     - name: homelab
+    - name: backstage

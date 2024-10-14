@@ -11,6 +11,4 @@ spec:
   type: website
   owner: group:team-nomster
   lifecycle: production
-  dependsOn:
-    - name: homelab
-    - name: backstage
+  

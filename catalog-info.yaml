@@ -6,9 +6,9 @@ metadata:
   annotations:
     github.com/project-slug: CloudNomster/helm-backstage
     argocd/app-name: backstage
-    # backstage.io/kubernetes-id: backstage
-    backstage.io/kubernetes-label-selector: 'app=backstage'
-  #   backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: backstage
+    # backstage.io/kubernetes-label-selector: 'app=backstage'
+    # backstage.io/techdocs-ref: dir:.
 spec:
   type: website
   owner: group:team-nomster

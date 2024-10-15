@@ -70,6 +70,6 @@ backstage:
     architecture: standalone
 
   serviceAccount:
-    create: true
-    name: "backstage"
+    create: false
+    name: "backstage-read"
     automountServiceAccountToken: true

@@ -1,4 +1,7 @@
 backstage:
+  global:
+    commonLabels:
+      app: backstage
   backstage:
     replicas: 1
     revisionHistoryLimit: 0

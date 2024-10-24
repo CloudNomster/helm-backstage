@@ -11,6 +11,6 @@ metadata:
     backstage.io/kubernetes-label-selector: 'app=backstage'
     # backstage.io/techdocs-ref: dir:.
 spec:
-  type: website
+  type: service
   owner: group:team-nomster
   lifecycle: production

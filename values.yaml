@@ -1,6 +1,6 @@
 backstage:
   commonLabels:
-      app: backstage
+    app: backstage
   backstage:
     replicas: 1
     revisionHistoryLimit: 0

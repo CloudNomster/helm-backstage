@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: Backstage Deploy
+  name: Backstage-Deploy
   description: Backstage Helm chart
   annotations:
     github.com/project-slug: CloudNomster/helm-backstage

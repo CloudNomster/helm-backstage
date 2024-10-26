@@ -1,15 +1,25 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: helmbackstage
+  name: Backstage Deploy
   description: Backstage Helm chart
   annotations:
     github.com/project-slug: CloudNomster/helm-backstage
     argocd/app-name: backstage
-    # 'backstage.io/kubernetes-id': backstage
-    # backstage.io/kubernetes-namespace: backstage
     backstage.io/kubernetes-label-selector: 'app=backstage'
-    # backstage.io/techdocs-ref: dir:.
+  links:
+  - url: https://github.com/CloudNomster/helm-backstage
+    title: Backstage deploy repository
+    icon: github
+    type: Code
+  - url: https://github.com/CloudNomster/backstage
+    title: Backstage Code Repository
+    icon: code
+    type: code
+  - url: https://backstage.io
+    title: Backstage Documentation
+    icon: docs
+    type: docs
 spec:
   type: service
   owner: group:team-nomster

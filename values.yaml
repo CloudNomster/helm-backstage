@@ -149,7 +149,7 @@ backstage:
                 dashboardApp: standard
                 caData: ${K8S_CONFIG_CA_DATA}
                 customResources: 
-                  - group: gateway.networking.k8s.io
+                  - group: httproute.networking.k8s.io
                     apiVersion: v1
                     plural: httproutes
 

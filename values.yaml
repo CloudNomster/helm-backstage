@@ -94,6 +94,10 @@ backstage:
               signIn:
                 resolvers:
                   - resolver: emailMatchingUserEntityProfileEmail
+          github:
+            development:
+              clientId: ${GITHUB_CLIENT_ID}
+              clientSecret: ${GITHUB_CLIENT_SECRET}
 
       scaffolder:
         # see https://backstage.io/docs/features/software-templates/configuration for software template options

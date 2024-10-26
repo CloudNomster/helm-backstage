@@ -24,4 +24,5 @@ spec:
   type: service
   owner: group:team-nomster
   lifecycle: production
-  dependsOn: component:Backstage
+  dependsOn:
+    - component:Backstage

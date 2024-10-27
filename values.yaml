@@ -157,6 +157,12 @@ backstage:
                     apiVersion: v1
                     plural: httproutes
 
+      harbor:
+        # This is the traditional way of configuring the Harbor plugin.
+        baseUrl: ${HARBOR_URL}
+        username: ${HARBOR_USERNAME}
+        password: ${HARBOR_PASSWORD}
+
       permission:
         enabled: true
 
